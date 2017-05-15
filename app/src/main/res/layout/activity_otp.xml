@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+    tools:context="com.skeleton.activity.OTPactivity">
+
+
+
+    <include layout="@layout/custom_header"></include>
+
+    <ImageView
+        style="@style/wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/spacing_xlarge"
+        android:src="@drawable/unlocked"></ImageView>
+
+    <LinearLayout
+        style="@style/match_wrap"
+        android:layout_marginBottom="@dimen/spacing_xlarge"
+        android:layout_marginTop="@dimen/spacing_xlarge"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/circular_button"
+            android:drawableLeft="@drawable/resend_icon"
+            android:padding="@dimen/padding"
+            android:text="@string/resendOTP"/>
+
+        <Button
+            style="@style/wrap_content"
+            android:layout_marginStart="@dimen/button_height_short"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/circular_button"
+            android:drawableLeft="@drawable/e_dit_number"
+            android:padding="@dimen/padding"
+            android:text="@string/editNumber"/>
+    </LinearLayout>
+
+    <TextView
+        style="@style/wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/tv_OTPtop"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/margin_top"/>
+
+    <TextView
+        style="@style/wrap_content"
+        android:layout_marginBottom="@dimen/margin_top"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/tv_OTPbelow"
+        android:textColor="@color/black"/>
+    <TextView
+       style="@style/match_wrap"
+        android:textSize="@dimen/font_xlarge"
+       android:inputType="number"
+       android:layout_marginBottom="@dimen/margin_top"
+        android:gravity="center_horizontal"/>
+
+    <LinearLayout
+        style="@style/match_wrap"
+        android:layout_marginBottom="@dimen/margin_top"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+
+        >
+        <EditText
+            android:id="@+id/et_otp1"
+            style="@style/wrap_content"
+            android:inputType="number"/>
+        <EditText
+            android:id="@+id/et_otp2"
+            style="@style/wrap_content"
+            android:inputType="number"/>
+        <EditText
+            android:id="@+id/et_otp3"
+            style="@style/wrap_content"
+            android:inputType="number"/>
+        <EditText
+            android:id="@+id/et_otp4"
+            style="@style/wrap_content"
+            android:inputType="number"/>
+    </LinearLayout>
+    <Button
+        style="@style/match_wrap"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="@dimen/spacing_medium"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:background="@drawable/circular_button"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="@string/verify"
+        android:textColor="@color/white"
+
+        />
+
+
+</LinearLayout>

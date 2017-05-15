@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/llSignIn"
+              style="@style/match_parent"
+              android:orientation="vertical">
+
+    <ScrollView style="@style/match_parent">
+
+        <LinearLayout
+            style="@style/match_parent"
+            android:layout_marginEnd="@dimen/large"
+            android:layout_marginStart="@dimen/large"
+            android:orientation="vertical">
+
+            <com.skeleton.util.customview.MaterialEditText
+                android:id="@+id/etEmailPhoneNo"
+                style="@style/match_wrap"
+                android:layout_marginTop="@dimen/large"
+                android:gravity="center"
+                android:hint="@string/email_PhoneNo"/>
+
+            <com.skeleton.util.customview.MaterialEditText
+                android:id="@+id/etPassword"
+                style="@style/match_wrap"
+                android:gravity="center"
+                android:hint="@string/password"
+                />
+
+            <CheckBox
+                android:id="@+id/cbRemember"
+                style="@style/match_wrap"
+                android:layout_marginStart="@dimen/margin_remember"
+                android:text="@string/remember"
+                android:textSize="@dimen/font_xlarge"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvForgotPassword"
+                style="@style/match_wrap"
+                android:layout_margin="@dimen/large"
+                android:gravity="center"
+                android:text="@string/forgotPassword"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_large"
+                />
+
+            <Button
+                android:id="@+id/btnSignInPage"
+                style="@style/button"
+                android:layout_margin="@dimen/large"
+                android:background="@drawable/circular_button"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="@string/sign_in"
+                android:textColor="@color/white"/>
+
+
+            <Button
+                android:id="@+id/btn_SignInFacebok"
+                style="@style/button"
+                android:layout_marginBottom="@dimen/large"
+                android:layout_marginLeft="@dimen/large"
+                android:layout_marginRight="@dimen/large"
+                android:background="@drawable/circular_button"
+                android:backgroundTint="@color/com_facebook_blue"
+                android:text="@string/sign_in_fac"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
