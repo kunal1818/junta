@@ -9,8 +9,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.skeleton.R;
-import com.skeleton.fragment.SignInFragement;
-import com.skeleton.fragment.SignUpFragement;
+import com.skeleton.fragment.SignInFragment;
+import com.skeleton.fragment.SignUpFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
 
         List<Fragment> fragments = new ArrayList<>();
-        fragments.add(new SignUpFragement());
-        fragments.add(new SignInFragement());
+        fragments.add(new SignUpFragment());
+        fragments.add(new SignInFragment());
 
         PagerAdapter pagerAdapter = new com.skeleton.adapter.PagerAdapter(getSupportFragmentManager(), fragments);
         vp.setAdapter(pagerAdapter);

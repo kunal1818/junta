@@ -68,7 +68,11 @@
 
         <activity android:name=".activity.MainActivity">
         </activity>
-        <activity android:name=".activity.OTPactivity">
+        <activity android:name=".activity.OtpActivity">
+        </activity>
+        <activity android:name=".activity.EditNumberActivity">
+        </activity>
+        <activity android:name=".activity.ProfileActivity">
         </activity>
     </application>
 

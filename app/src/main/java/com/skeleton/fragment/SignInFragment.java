@@ -15,14 +15,17 @@ import com.skeleton.retrofit.APIError;
 import com.skeleton.retrofit.CommonParams;
 import com.skeleton.retrofit.ResponseResolver;
 import com.skeleton.retrofit.RestClient;
+import com.skeleton.util.Log;
 import com.skeleton.util.ValidateEditText;
 import com.skeleton.util.customview.MaterialEditText;
+
+import io.paperdb.Paper;
 
 /**
  * Created by mark63 on 11/5/17.
  */
 
-public class SignInFragement extends Fragment implements View.OnClickListener {
+public class SignInFragment extends Fragment implements View.OnClickListener {
 
     private static final int APP_VERSION = 101;
     private MaterialEditText etEmail, etPassword;
@@ -76,7 +79,13 @@ public class SignInFragement extends Fragment implements View.OnClickListener {
             RestClient.getApiInterface().login(null, params.getMap()).enqueue(new ResponseResolver<SignUpResponse>(getContext(), true, true) {
                 @Override
                 public void success(final SignUpResponse signUpResponse) {
-                    Toast.makeText(getContext(), signUpResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                    if ("200".equals(String.valueOf(signUpResponse.getStatusCode()))) {
+                        Log.d("debug", "success");
+                        Toast.makeText(getContext(), signUpResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                        Paper.book().write("key", "bearer " + signUpResponse.getData().getAccessToken());
+                        Paper.book().write("Userdata", signUpResponse);
+                        Log.d("debug", "added everything ");
+                    }
                 }
 
                 @Override

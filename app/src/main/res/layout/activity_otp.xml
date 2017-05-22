@@ -7,8 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/transparent"
     android:orientation="vertical"
-    tools:context="com.skeleton.activity.OTPactivity">
-
+    tools:context="com.skeleton.activity.OtpActivity">
 
 
     <include layout="@layout/custom_header"></include>
@@ -23,11 +22,11 @@
         style="@style/match_wrap"
         android:layout_marginBottom="@dimen/spacing_xlarge"
         android:layout_marginTop="@dimen/spacing_xlarge"
-        android:background="@color/white"
         android:gravity="center"
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btn_resetOtp"
             style="@style/wrap_content"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/circular_button"
@@ -36,9 +35,10 @@
             android:text="@string/resendOTP"/>
 
         <Button
+            android:id="@+id/btn_editNoOtp"
             style="@style/wrap_content"
-            android:layout_marginStart="@dimen/button_height_short"
             android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/button_height_short"
             android:background="@drawable/circular_button"
             android:drawableLeft="@drawable/e_dit_number"
             android:padding="@dimen/padding"
@@ -48,48 +48,63 @@
     <TextView
         style="@style/wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/margin_top"
         android:text="@string/tv_OTPtop"
-        android:textColor="@color/black"
-        android:layout_marginBottom="@dimen/margin_top"/>
+        android:textColor="@color/black"/>
 
     <TextView
         style="@style/wrap_content"
-        android:layout_marginBottom="@dimen/margin_top"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/margin_top"
         android:text="@string/tv_OTPbelow"
         android:textColor="@color/black"/>
+
     <TextView
-       style="@style/match_wrap"
-        android:textSize="@dimen/font_xlarge"
-       android:inputType="number"
-       android:layout_marginBottom="@dimen/margin_top"
-        android:gravity="center_horizontal"/>
+        style="@style/match_wrap"
+        android:layout_marginBottom="@dimen/margin_top"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:textSize="@dimen/font_xlarge"/>
 
     <LinearLayout
         style="@style/match_wrap"
         android:layout_marginBottom="@dimen/margin_top"
-        android:orientation="horizontal"
         android:gravity="center_horizontal"
+        android:orientation="horizontal"
 
         >
-        <EditText
+
+        <com.skeleton.util.customview.MaterialEditText
             android:id="@+id/et_otp1"
             style="@style/wrap_content"
-            android:inputType="number"/>
-        <EditText
+            android:hint="X"
+            android:inputType="number"
+            android:layout_marginStart="@dimen/button_height_small"/>
+
+        <com.skeleton.util.customview.MaterialEditText
             android:id="@+id/et_otp2"
             style="@style/wrap_content"
-            android:inputType="number"/>
-        <EditText
+            android:hint="X"
+            android:inputType="number"
+            android:layout_marginStart="@dimen/button_height_small"/>
+
+        <com.skeleton.util.customview.MaterialEditText
             android:id="@+id/et_otp3"
             style="@style/wrap_content"
-            android:inputType="number"/>
-        <EditText
+            android:hint="X"
+            android:inputType="number"
+            android:layout_marginStart="@dimen/button_height_small"/>
+
+        <com.skeleton.util.customview.MaterialEditText
             android:id="@+id/et_otp4"
             style="@style/wrap_content"
+            android:hint="X"
+            android:layout_marginStart="@dimen/button_height_small"
             android:inputType="number"/>
     </LinearLayout>
+
     <Button
+        android:id="@+id/btn_verify"
         style="@style/match_wrap"
         android:layout_gravity="center_horizontal"
         android:layout_marginEnd="@dimen/spacing_medium"

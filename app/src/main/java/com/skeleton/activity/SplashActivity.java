@@ -14,6 +14,11 @@ import com.google.android.gms.common.GoogleApiAvailability;
 import com.skeleton.R;
 import com.skeleton.fcm.FCMTokenInterface;
 import com.skeleton.fcm.MyFirebaseInstanceIdService;
+import com.skeleton.model.SignUpResponse;
+import com.skeleton.retrofit.APIError;
+import com.skeleton.retrofit.ResponseResolver;
+import com.skeleton.retrofit.RestClient;
+import com.skeleton.util.Log;
 import com.skeleton.util.Util;
 import com.skeleton.util.dialog.CustomAlertDialog;
 
@@ -25,6 +30,7 @@ import io.paperdb.Paper;
 public class SplashActivity extends BaseActivity implements FCMTokenInterface {
     private static final String TAG = SplashActivity.class.getName();
     private Dialog mDialog;
+    private String accessToken;
 
 
     @Override
@@ -115,10 +121,34 @@ public class SplashActivity extends BaseActivity implements FCMTokenInterface {
     public void onTokenReceived(final String token) {
         //   Log.e(TAG, token);
         // startActivity(new Intent(this, TestClassLocation.class));
-        if (Paper.book().read("key") != null) {
-            startActivity(new Intent(this, OTPactivity.class));
+        accessToken = Paper.book().read("key");
+        //Toast.makeText(getApplicationContext(), accessToken, Toast.LENGTH_SHORT).show();
+        if (accessToken != null) {
+            android.util.Log.d("debug", accessToken);
+            RestClient.getApiInterface().profile(accessToken).enqueue(new ResponseResolver<SignUpResponse>(this, true, true) {
+                @Override
+                public void success(final SignUpResponse signUpResponse) {
+                    startActivity(new Intent(SplashActivity.this, ProfileActivity.class));
+//                    if (!signUpResponse.getData().getUserDetails().getPhoneVerified()) {
+//                        startActivity(new Intent(SplashActivity.this, OtpActivity.class));
+//                    } else {
+//                        if (signUpResponse.getData().getUserDetails().getStep1CompleteOrSkip()
+//                                && signUpResponse.getData().getUserDetails().getStep2CompleteOrSkip()) {
+//                            startActivity(new Intent(SplashActivity.this, ProfileActivity.class));
+//                        } else {
+//                            Log.e("error", "error");
+//                        }
+//                    }
+                }
+
+                @Override
+                public void failure(final APIError error) {
+                    Log.d("debug", error.getMessage());
+                }
+            });
         } else {
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(SplashActivity.this, MainActivity.class));
+
         }
     }
 

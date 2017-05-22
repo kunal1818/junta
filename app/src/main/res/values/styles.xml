@@ -59,5 +59,22 @@
         <item name="android:layout_marginRight">@dimen/large</item>
         <item name="android:textSize">@dimen/large_text</item>
     </style>
+    <style name="profile_one_view">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">@dimen/widthProfile</item>
+        <item name="android:layout_height">@dimen/heightProfile</item>
+        <item name="android:background">@drawable/circular_button</item>
+        <item name="android:layout_marginEnd">@dimen/heightProfile</item>
+            </style>
+    <style name="et_profile_one">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/spacing_medium</item>
+        <item name="android:layout_marginStart">@dimen/spacing_medium</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:drawableEnd">@drawable/height_dropdown</item>
+    </style>
+
 
 </resources>

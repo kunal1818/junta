@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/match_parent"
+    android:orientation="vertical"
+    tools:context="com.skeleton.fragment.ProfileOneFragment">
+
+    <include layout="@layout/custom_header"></include>
+
+    <RelativeLayout
+        style="@style/match_wrap"
+        android:layout_margin="@dimen/spacing_small">
+
+        <ImageView
+            android:id="@+id/ivStepCompleteBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/background_parts"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/ivStepCompleteBackground"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_startIv"
+            android:src="@drawable/one_step"/>
+
+        />
+    </RelativeLayout>
+
+    <include layout="@layout/custom_view"></include>
+
+    <ScrollView
+        style="@style/match_parent">
+
+        <LinearLayout
+            style="@style/match_parent"
+            android:orientation="vertical">
+
+            <com.skeleton.util.customview.MaterialEditText
+                android:id="@+id/etRelationship"
+                style="@style/et_profile_one"
+                android:hint="@string/relationship"
+                />
+
+            <com.skeleton.util.customview.MaterialEditText
+                android:id="@+id/etEthnicity"
+                style="@style/et_profile_one"
+                android:hint="@string/ethnicity"
+                />
+
+            <com.skeleton.util.customview.MaterialEditText
+                android:id="@+id/etReligion"
+                style="@style/et_profile_one"
+                android:hint="@string/religion"
+                />
+
+            <com.skeleton.util.customview.MaterialEditText
+                android:id="@+id/etHeight"
+                style="@style/et_profile_one"
+                android:hint="@string/height"
+                />
+
+            <com.skeleton.util.customview.MaterialEditText
+                android:id="@+id/etBodytype"
+                style="@style/et_profile_one"
+                android:hint="@string/bodytype"
+                />
+
+            <com.skeleton.util.customview.MaterialEditText
+                android:id="@+id/etSmoking"
+                style="@style/et_profile_one"
+                android:hint="@string/smoking"
+                />
+
+            <com.skeleton.util.customview.MaterialEditText
+                android:id="@+id/etOrientation"
+                style="@style/et_profile_one"
+                android:hint="@string/orientation"
+                />
+
+            <Button
+                android:id="@+id/btn_next"
+                style="@style/match_wrap"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="@dimen/spacing_medium"
+                android:layout_marginStart="@dimen/spacing_medium"
+                android:background="@drawable/circular_button"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="@string/btn_next"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

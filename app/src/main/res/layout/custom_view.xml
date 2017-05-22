@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/match_wrap"
+              android:layout_margin="@dimen/spacing_small"
+              android:orientation="horizontal"
+    >
+
+    <View
+        android:id="@+id/view1"
+        style="@style/profile_one_view"
+        ></View>
+
+    <View
+        android:id="@+id/view2"
+        style="@style/profile_one_view"
+        ></View>
+
+    <View
+        android:id="@+id/view3"
+        style="@style/profile_one_view"
+        ></View>
+
+    <View
+        android:id="@+id/view4"
+        style="@style/profile_one_view"
+        ></View>
+
+    <View
+        android:id="@+id/view5"
+        style="@style/profile_one_view"
+        ></View>
+
+    <View
+        android:id="@+id/view6"
+        style="@style/profile_one_view"
+        ></View>
+
+    <View
+        android:id="@+id/view7"
+        style="@style/profile_one_view"
+        ></View>
+</LinearLayout>

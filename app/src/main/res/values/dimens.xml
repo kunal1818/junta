@@ -32,6 +32,7 @@
     <dimen name="button_height_small">24dp</dimen>
 
     <!--met editext-->
+    <dimen name="margin_startIv">6dp</dimen>
     <dimen name="default_padding_top">8dp</dimen>
     <dimen name="default_padding_bottom">8dp</dimen>
     <dimen name="inner_padding_left">0dp</dimen>
@@ -50,5 +51,7 @@
     <dimen name="padding_header_text">25dp</dimen>
     <dimen name="height_view">38dp</dimen>
     <dimen name="margin_remember">70dp</dimen>
+    <dimen name="widthProfile">30dp</dimen>
+    <dimen name="heightProfile">5dp</dimen>
 
 </resources>

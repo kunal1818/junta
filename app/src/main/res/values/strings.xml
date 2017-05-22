@@ -75,5 +75,16 @@
     <string name="verify">Verify</string>
     <string name="phone">Phone Number Verfication</string>
     <string name="number">+91</string>
+    <string name="enter_Number">Enter Number</string>
+    <string name="submit">Submit</string>
+    <string name="relationship">Relationship history</string>
+    <string name="ethnicity">Ethnicity</string>
+    <string name="religion">Religion</string>
+    <string name="height">Height</string>
+    <string name="bodytype">Body Type</string>
+    <string name="smoking">Smoking</string>
+    <string name="drinking">Drinking</string>
+    <string name="orientation">Orientation</string>
+    <string name="btn_next">Next</string>
 
 </resources>

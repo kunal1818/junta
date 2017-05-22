@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.skeleton.activity.EditNumberActivity">
+
+    <include layout="@layout/custom_header"></include>
+
+    <com.skeleton.util.customview.MaterialEditText
+        android:id="@+id/et_number"
+        style="@style/match_wrap"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:gravity="center_horizontal"
+        android:hint="@string/enter_Number"
+        android:textSize="@dimen/font_large"/>
+
+    <Button
+        android:id="@+id/btn_submit"
+        style="@style/match_wrap"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginEnd="@dimen/spacing_medium"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:background="@drawable/circular_button"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:text="@string/submit"
+        android:textColor="@color/white"></Button>
+
+
+</LinearLayout>

@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.kbeanie.multipicker.api.entity.ChosenImage;
 import com.skeleton.R;
+import com.skeleton.activity.OtpActivity;
 import com.skeleton.model.SignUpResponse;
 import com.skeleton.retrofit.APIError;
 import com.skeleton.retrofit.MultipartParams;
@@ -39,7 +40,7 @@ import io.paperdb.Paper;
  * Created by mark63 on 11/5/17.
  */
 
-public class SignUpFragement extends BaseFragment {
+public class SignUpFragment extends BaseFragment {
     private MaterialEditText etName, etPhoneNum, etEmail, etDOB, etPassword, etConfirmPassword;
     private Button btnSignUp;
     private ImageView ivProfilePic;
@@ -90,7 +91,7 @@ public class SignUpFragement extends BaseFragment {
                 postData();
                 break;
             case R.id.ivCircular:
-                chooser = new ImageChooser.Builder(SignUpFragement.this).build();
+                chooser = new ImageChooser.Builder(SignUpFragment.this).build();
                 chooser.selectImage(new ImageChooser.OnImageSelectListener() {
                     @Override
                     public void loadImage(final List<ChosenImage> list) {
@@ -212,10 +213,16 @@ public class SignUpFragement extends BaseFragment {
                     , true) {
                 @Override
                 public void success(final SignUpResponse signUpResponse) {
-                    Log.d("debug", "success");
-                    Toast.makeText(getContext(), signUpResponse.getMessage(), Toast.LENGTH_SHORT).show();
-                    Paper.book().write("key", "bearer " + signUpResponse.getData().getAccessToken());
+                    Log.d("debug", String.valueOf(signUpResponse.getStatusCode()));
+                    if ("200".equals(String.valueOf(signUpResponse.getStatusCode()))) {
+                        Log.d("debug", "success");
+                        Toast.makeText(getContext(), signUpResponse.getMessage(), Toast.LENGTH_SHORT).show();
+                        Paper.book().write("key", "bearer " + signUpResponse.getData().getAccessToken());
+                        Paper.book().write("Userdata", signUpResponse);
+                        Log.d("debug", "added everything ");
+                        startActivity(new Intent(getContext(), OtpActivity.class));
 
+                    }
                 }
 
                 @Override
