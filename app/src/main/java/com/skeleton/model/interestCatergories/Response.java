@@ -1,13 +1,12 @@
-package com.skeleton.model.profile;
+package com.skeleton.model.interestCatergories;
 
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Created by mark63 on 23/5/17.
+ * response for Interest categories
  */
 
-public class ConstantResponse {
-
+public class Response {
     @SerializedName("statusCode")
     private int statusCode;
     @SerializedName("message")
@@ -16,27 +15,21 @@ public class ConstantResponse {
     private Data data;
 
     /**
-     * kfk
-     *
-     * @return frr
+     * @return status code
      */
     public int getStatusCode() {
         return statusCode;
     }
 
     /**
-     * ferr
-     *
-     * @return frrrgr
+     * @return Messsage with status code
      */
     public String getMessage() {
         return message;
     }
 
     /**
-     * fbfbfbbr
-     *
-     * @return egrgrgr
+     * @return main data from server
      */
     public Data getData() {
         return data;

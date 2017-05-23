@@ -114,7 +114,7 @@ public interface ApiInterface {
      * @return profile constants
      */
     @GET(PROFILE_CONSTANTS)
-    Call<ConstantResponse> profile_constants();
+    Call<ConstantResponse> profileConstants();
 
     /**
      * @param authorization auth

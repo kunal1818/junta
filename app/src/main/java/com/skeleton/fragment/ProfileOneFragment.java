@@ -119,7 +119,7 @@ public class ProfileOneFragment extends BaseFragment {
      */
 
     public ConstantResponse getProfile() {
-        RestClient.getApiInterface().profile_constants().enqueue(new ResponseResolver<ConstantResponse>(getActivity(), true, true) {
+        RestClient.getApiInterface().profileConstants().enqueue(new ResponseResolver<ConstantResponse>(getActivity(), true, true) {
             @Override
             public void success(final ConstantResponse constantResponse) {
                 if ("200".equals(String.valueOf(constantResponse.getStatusCode()))) {
@@ -132,6 +132,7 @@ public class ProfileOneFragment extends BaseFragment {
                     etHeight.setOnClickListener(ProfileOneFragment.this);
                     etSmoking.setOnClickListener(ProfileOneFragment.this);
                     etOrientation.setOnClickListener(ProfileOneFragment.this);
+
                 }
 
             }

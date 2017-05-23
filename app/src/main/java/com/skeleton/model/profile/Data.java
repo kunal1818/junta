@@ -5,135 +5,98 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 /**
- * data class
+ * jijio
  */
 public class Data {
-    @SerializedName("orientation")
-    private List<String> orientation;
-    @SerializedName("relationshipHistory")
-    private List<String> relationshipHistory;
-    @SerializedName("ethnicity")
-    private List<String> ethnicity;
-    @SerializedName("religion")
-    private List<String> religion;
-    @SerializedName("bodyType")
-    private List<String> bodyType;
-    @SerializedName("smoking")
-    private List<String> smoking;
-    @SerializedName("drinking")
-    private List<String> drinking;
-    @SerializedName("height")
-    private List<String> height;
+    @SerializedName("Orientation")
+    private List<String> mOrientation;
+    @SerializedName("RelationshipHistory")
+    private List<String> mRelationshipHistory;
+    @SerializedName("Ethnicity")
+    private List<String> mEthnicity;
+    @SerializedName("Religion")
+    private List<String> mReligion;
+    @SerializedName("BodyType")
+    private List<String> mBodyType;
+    @SerializedName("Smoking")
+    private List<String> mSmoking;
+    @SerializedName("Drinking")
+    private List<String> mDrinking;
+    @SerializedName("Height")
+    private List<String> mHeight;
 
     /**
-     * @return orientation of user
+     * @return get orientation from here
      */
     public List<String> getOrientation() {
-        return orientation;
+        return mOrientation;
     }
 
     /**
-     * @param orientation orientation of user
-     */
-    public void setOrientation(final List<String> orientation) {
-        this.orientation = orientation;
-    }
-
-    /**
-     * @return relationship history of user
+     * vff
+     *
+     * @return get realatioship from here
      */
     public List<String> getRelationshipHistory() {
-        return relationshipHistory;
+        return mRelationshipHistory;
     }
 
     /**
-     * @param relationshipHistory relation history of user
-     */
-    public void setRelationshipHistory(final List<String> relationshipHistory) {
-        this.relationshipHistory = relationshipHistory;
-    }
-
-    /**
-     * @return ethnicity of user
+     * vff
+     *
+     * @return get enthicity from here
      */
     public List<String> getEthnicity() {
-        return ethnicity;
+        return mEthnicity;
     }
 
     /**
-     * @param ethnicity of user
+     * vff
+     *
+     * @return get religion from here
      */
-    public void setEthnicity(final List<String> ethnicity) {
-        this.ethnicity = ethnicity;
-    }
 
-    /**
-     * @return religion of user
-     */
     public List<String> getReligion() {
-        return religion;
+        return mReligion;
     }
 
     /**
-     * @param religion of user
+     * vff
+     *
+     * @return get Bodytype from here
      */
-    public void setReligion(final List<String> religion) {
-        this.religion = religion;
-    }
 
-    /**
-     * @return body Type
-     */
     public List<String> getBodyType() {
-        return bodyType;
+        return mBodyType;
     }
 
     /**
-     * @param bodyType of user
+     * vff
+     *
+     * @return get smoking  from here
      */
-    public void setBodyType(final List<String> bodyType) {
-        this.bodyType = bodyType;
-    }
 
-    /**
-     * @return smoking
-     */
     public List<String> getSmoking() {
-        return smoking;
+        return mSmoking;
     }
 
     /**
-     * @param smoking habits of user
+     * vff
+     *
+     * @return get drinking  from here
      */
-    public void setSmoking(final List<String> smoking) {
-        this.smoking = smoking;
-    }
 
-    /**
-     * @return drinking
-     */
     public List<String> getDrinking() {
-        return drinking;
+        return mDrinking;
     }
 
     /**
-     * @param drinking of user
+     * vff
+     *
+     * @return get Height from here
      */
-    public void setDrinking(final List<String> drinking) {
-        this.drinking = drinking;
-    }
 
-    /**
-     * @return height of user
-     */
     public List<String> getHeight() {
-        return height;
-    }
-
-    /**
-     * @param height of user
-     */
-    public void setHeight(final List<String> height) {
-        this.height = height;
+        return mHeight;
     }
 }

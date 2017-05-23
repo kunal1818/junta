@@ -86,5 +86,6 @@
     <string name="drinking">Drinking</string>
     <string name="orientation">Orientation</string>
     <string name="btn_next">Next</string>
-
+    <string name="add_interests">Add your 5 interests</string>
+    <string name="save_continue">Save And Continue</string>
 </resources>
