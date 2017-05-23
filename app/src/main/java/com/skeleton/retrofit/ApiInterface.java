@@ -34,6 +34,7 @@ public interface ApiInterface {
     String EDIT_NUMBER = "api/user/updateProfile";
     String VERIFY = "api/user/verifyOTP";
     String PROFILE_CONSTANTS = "api/profile/constants";
+    String UPDATE_PROFILE = "api/user/updateProfile";
 
 
 //    /**
@@ -99,6 +100,16 @@ public interface ApiInterface {
     @Multipart
     @POST(REGISTER)
     Call<SignUpResponse> register(@PartMap HashMap<String, RequestBody> map);
+
+    /**
+     * @param authorization auth
+     * @param map           map is for getting data
+     * @return update the profile of the user
+     */
+    @Multipart
+    @PUT(UPDATE_PROFILE)
+    Call<ConstantResponse> update_profie(@Header(AUTHORIZATION) String authorization,
+                                         @PartMap HashMap<String, RequestBody> map);
 
     /**
      * @param authorization auth

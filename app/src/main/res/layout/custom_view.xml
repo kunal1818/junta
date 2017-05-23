@@ -5,38 +5,38 @@
               android:orientation="horizontal"
     >
 
-    <View
-        android:id="@+id/view1"
+    <TextView
+        android:id="@+id/tvRelation"
         style="@style/profile_one_view"
-        ></View>
+        ></TextView>
 
-    <View
-        android:id="@+id/view2"
+    <TextView
+        android:id="@+id/tvEthnicity"
         style="@style/profile_one_view"
-        ></View>
+        ></TextView>
 
-    <View
-        android:id="@+id/view3"
+    <TextView
+        android:id="@+id/tvReligion"
         style="@style/profile_one_view"
-        ></View>
+        ></TextView>
 
-    <View
-        android:id="@+id/view4"
+    <TextView
+        android:id="@+id/tvHeight"
         style="@style/profile_one_view"
-        ></View>
+        ></TextView>
 
-    <View
-        android:id="@+id/view5"
+    <TextView
+        android:id="@+id/tvBodytype"
         style="@style/profile_one_view"
-        ></View>
+        ></TextView>
 
-    <View
-        android:id="@+id/view6"
+    <TextView
+        android:id="@+id/tvSmoking"
         style="@style/profile_one_view"
-        ></View>
+        ></TextView>
 
-    <View
-        android:id="@+id/view7"
+    <TextView
+        android:id="@+id/tvOrientation"
         style="@style/profile_one_view"
-        ></View>
+        ></TextView>
 </LinearLayout>

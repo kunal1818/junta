@@ -20,7 +20,7 @@ public final class MultipartParams {
      *
      * @param builder object of builder class of MultipartParams
      */
-    private MultipartParams(final Builder builder) {
+    public MultipartParams(final Builder builder) {
         this.map = builder.map;
 
     }
