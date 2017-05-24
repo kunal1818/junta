@@ -179,18 +179,19 @@ public class ProfileOneFragment extends BaseFragment {
      */
     public void updateInfo() {
         MultipartParams params = new MultipartParams.Builder()
-                .add("RelationshipHistory", etRelationship)
-                .add("Ethnicity", etEthnicity)
-                .add("Religion", etReligion)
-                .add("BodyType", etBodytype)
-                .add("Smoking", etSmoking)
-                .add("Height", etHeight)
-                .add("Orientation", etOrientation).build();
+                .add("relationshipHistory", etRelationship.getText().toString())
+                .add("ethnicity", etEthnicity.getText())
+                .add("religion", etReligion.getText())
+                .add("bodyType", etBodytype.getText())
+                .add("smoking", etSmoking.getText())
+                .add("height", etHeight.getText())
+                .add("orientation", etOrientation.getText()).build();
         RestClient.getApiInterface().update_profie(accessToken, params.getMap())
-                .enqueue(new ResponseResolver<ConstantResponse>(getContext(), true, true) {
+                .enqueue(new ResponseResolver<ConstantResponse>(getContext(), false, false) {
                     @Override
                     public void success(final ConstantResponse constantResponse) {
                         Toast.makeText(getContext(), "profile updated", Toast.LENGTH_SHORT).show();
+
                     }
 
                     @Override
